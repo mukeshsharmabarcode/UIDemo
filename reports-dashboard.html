@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Reports | Mobivue</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css" >
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" >
+<link rel="stylesheet" href="css/my_style.css">
+<body>
+
+<header>
+<div class="acceKey">
+<a href="Dashboard.html" accesskey="d"></a>
+<a href="user-master.html" accesskey="m">Masters</a>
+<a href="sub-usermaster.html" accesskey="w">WareHouse Master</a>
+<a href="master-transaction.html" accesskey="c">Customer Master</a>
+<a href="transction-master.html" accesskey="t">Transactions</a>
+<a href="master.html"  accesskey="r">Raw Material Warehouse</a>
+<a href="purchase-order-z.html" accesskey="p">Putaway</a>
+</div>
+<div class="container-fluid">
+<div class="row">
+<div class="col-lg-2 col-xs-3"><div class="logo"><a href="Dashboard.html"><img src="img/login-logo.jpg" class="img-responsive"></a></div></div>
+<div class="col-lg-8 col-xs-5">
+</div>
+<div class="col-lg-2 col-xs-4 text-right">
+<div class="baar">
+ <span class="fa fa-gear my_1" onclick="myprofile();" ></span>
+<ul id="drop1" class="drop">
+<div class="caret_m" style="top:-24px;"><i class="fa fa-caret-up"></i></div>
+<li><a href="#"><i class="fa fa-user"></i>Change Password</a></li>
+<li><a href="#"><i class="fa fa-envelope"></i>Edit Profile</a></li>
+<li><a href="login.html"><i class="fa fa-lock"></i>Signout</a></li>
+
+</ul>
+
+</div>
+<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+</div>
+
+</div>
+</div>
+</header>
+<section class="set">
+<div class="part_1">
+
+
+<div class="nav-side-menu"  id="myNavbar" >
+
+     
+        <div class="menu-list"  >
+              
+              <div class="admin_mainview">
+              <span class="img_user"><img src="img/user.jpg"></span>
+              <span class="admin_view nav_min"> <h1>Username</h1><p>Employee - 454</p></span> 
+              </div>
+            <ul id="myslide" class="menu-content">
+           
+                <li class="myslidemenu">
+                  <a href="Dashboard.html">
+                 <i class="fa fa-tachometer"></i><span class="nav_min"> Dashboard</span> </a>
+                </li>
+
+                <li   class="myslidemenu">
+                  <a href="user-master.html"><i class="fa fa-address-book-o" aria-hidden="true"></i><span class="nav_min"> Masters </span></a>
+                </li>
+                <li  class="myslidemenu">
+                  <a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>  <span class="nav_min">Administration</span></a>
+                </li>
+
+
+                <li  class="myslidemenu">
+                  <a href="#"><i class="fa fa-print" aria-hidden="true"></i><span class="nav_min"> Printing </span></a>
+                </li> 
+                <li  class="myslidemenu active">
+                  <a href="reports-dashboard.html"><i class="fa fa-clipboard" aria-hidden="true"></i><span class="nav_min"> Reports</span> </a>
+                </li> 
+                 <li  class="myslidemenu ">
+                  <a href="transction-master.html"><i class="fa fa-retweet" aria-hidden="true"></i> <span class="nav_min">Transactions</span></a>
+                </li> 
+                 <li  class="myslidemenu">
+                  <a href="#"><i class="fa fa-cogs" aria-hidden="true"></i><span class="nav_min"> Configuration</span></a>
+                </li>  
+                
+                <li  id="p1" class="myslidemenu"  href="#profile" >
+                  <a href="#"><i class="fa fa-user"></i> <span class="nav_min">Profile </span></a>
+                </li>  
+                
+
+
+  </ul>
+  <div class="msg"><h4><span class="nav_min" >Copyright ©</span><b  style="display:inline-block">BCI</b></h4></div>
+     </div>
+</div>
+</div>
+<div class="part_2">
+<div class="footer2"><span style="float:left;padding-top:10px; ">Version 1.2</span>
+<button type="button" class="btn_info" data-toggle="modal" data-target="#myModal" style="float:right;"><i class="fa fa-info"></i></button></div>
+<div class="col-lg-12"><h3> <i class="fa fa-rocket"></i> Reports</h3></div>
+
+<div class="col-lg-3  col-xs-6">
+
+<a href="main-report.html" class="box1 a1" style="height:150px;">
+<span class="box_icon1"><i class="fa fa-clone"></i></span>
+<span class="box_details1"><b>Main Report</b></span>
+<span id="favorite" onClick="fav()" class="fa1"><i class="fa fa-heart"></i></span>
+</a>
+</div>
+<div class="col-lg-3 col-xs-6">
+<div class="box1 a2" style="height:150px;">
+<span class="box_icon1"><i class="fa fa-newspaper-o"></i></span>
+<span class="box_details1"><b>Pharma Report</b></span>
+<a id="favorite" onClick="fav()" class="fa2"><i class="fa fa-heart"></i></a>
+</div>
+</div>
+<div class="col-lg-3 col-xs-6" >
+<div class="box1 a3" style="height:150px;">
+<span class="box_icon1"><i class="fa fa-line-chart "></i></span>
+<span class="box_details1"><b>Retail Report</b></span>
+<a id="favorite" onClick="fav()" class="fa3"><i class="fa fa-heart"></i></a>
+</div>
+</div>
+<div class="col-lg-3 col-xs-6" >
+<div class="box1 a4" style="height:150px;">
+<span class="box_icon1"><i class="fa  fa-area-chart "></i></span>
+<span class="box_details1"><b>Sales Report</b></span>
+<a id="favorite" onClick="fav()" class="fa4"><i class="fa fa-heart"></i></a>
+</div>
+</div>
+
+
+
+
+
+</div>
+
+</section>
+<!------------------------contact start----------------------->
+  <i class="fa fa-phone  contact"  data-toggle="modal" data-target="#contact" title="Contact Us"></i>
+   
+  <div class="modal fade" id="contact" role="dialog" style="z-index:99999;">
+    <div class="modal-dialog  modal-lg" style="width:90%; margin:1% auto;">    
+      <div class="modal-content">
+        <div class="modal-header contact-banner">
+          <button type="button" class="close my-close" data-dismiss="modal">&times;</button>
+          <h1>Get in touch</h1>
+          <p>Want to get in touch? We'd love to hear from you. Here's how you can reach us...</p>
+        </div>
+        <div class="modal-body" style="background:#fff;float:left;width: 100%; min-height:350px;">
+        <div class="col-lg-12"> 
+           	<div class="part_cont">
+              <div class="part_cont1">
+              <i class="fa fa-phone"></i>
+              <h2>Talk to Sales</h2>
+              <p>Interested to know more about our services?</p>
+              <span>+91-9896639726</span>
+              <a href="javascript:void(0)" onClick="cntname()">View all global numbers
+              <div class="fa fa-angle-double-down"></div></a>
+              </div>
+              <div class="part_cont2">
+              <i class="fa fa-comments"></i>
+              <h2>Technical Support</h2>
+              <p>Already using our product and experiencing technical issues?</p>
+              <span ></span>
+              <button  class="btn btn-primary" style="margin-top:30px;" onClick="cntfrm()">Contact Support</button>
+              </div>
+              
+            </div>
+            
+          </div>
+          <div class="clearfix"></div>
+            <div class="col-lg-12" >
+          
+          <div class="row" id="cntname">
+          <div class="col-lg-3">
+          <div class="box_cont">
+          <i class="fa fa-user-circle-o"></i>
+          <h2>Gunjeet Singh<br><span>(Testing Manager)</span></h2>
+          <p>+91-9898989891
+          </p>
+          </div>
+          </div>
+          <div class="col-lg-3">
+          <div class="box_cont">
+          <i class="fa fa-user-circle-o"></i>
+          <h2>Mukesh Sharma<br><span>(Web Designer)</span></h2>
+          <p>+91-9896639726
+          </p>
+          </div>
+          </div>
+          <div class="col-lg-3">
+          <div class="box_cont">
+          <i class="fa fa-user-circle-o"></i>
+          <h2>Gunjeet Singh<br><span>(Testing Manager)</span></h2>
+          <p>+91-9999999999
+          </p>
+          </div>
+          </div>
+          <div class="col-lg-3">
+          <div class="box_cont">
+          <i class="fa fa-user-circle-o"></i>
+          <h2>Mukesh Sharma<br><span>(Web Designer)</span></h2>
+          <p>+91-9896639726
+          </p>
+          </div>
+          </div>
+          </div>
+          </div>
+          <div class="col-lg-5 col-xs-offset-4" >
+          <div class="row" id="cntfrm">
+          <div class="form-cont">
+          <h2>Enquiry Form</h2>
+          <form>
+           <div class="form-group">
+             <label>Name:</label>
+             <input type="text" class="form-control" >
+             </div>
+             <div class="form-group">
+             <label>Email:</label>
+             <input type="Email" class="form-control" >
+             </div>
+             <div class="form-group">
+             <label>Employee Code:</label>
+             <input type="Email" class="form-control" >
+             </div>
+             <div class="form-group">
+             <label>Company Name:</label>
+             <input type="Email" class="form-control" >
+             </div>
+             <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+          </div>
+          </div>
+          </div>
+          
+        </div>
+        
+      </div>
+      
+    </div>
+  </div>
+  <!------------------------contact key end----------------------->
+   <!------------------------License start----------------------->
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="text-align:left;"><img src="img/imageedit_3_9987091016.png" width="63" height="40">
+          <span class="pop_uph" style="">Project Overview</span></h4>
+        </div>
+        <div class="modal-body" style="background:#ebebeb;float:left;width:100%;padding: 7px;">
+          <div class="col-lg-6" > 
+          <div class="part1_pop" style="max-height:257px;margin-bottom: 7px;">
+          <h4 class="heading_pop">Product Details</h4>         
+          <p class="subheading_pop"></p>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Client<span >Hero</span></label>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Product Type<span>WMS</span></label>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Site<span>Gurgaon</span></label>          
+           <label class="info-my"><i class="fa fa-dot-circle-o"></i>Description<span>Warehouse</span></label>           
+            <label class="info-my"><i class="fa fa-dot-circle-o"></i>Developed For<span>HERO</span></label>          
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Developed by<span>BCI</span></label>      
+
+         </div>
+          </div>
+          <div class="col-lg-6"> 
+           <div class="part1_pop" style="max-height:257px;margin-bottom: 7px;">
+          <h4 class="heading_pop">Application Details</h4>         
+          <p class="subheading_pop"></p>
+        <label class="info-my"><i class="fa fa-circle" style="color:#329d48;"></i>Application status
+        <span style="color:#329d48;">Live</span></label>
+        <label class="info-my"><i class="fa fa-circle" style=" color:#c46752;"></i>Application status
+        <span style=" color:#c46752;">Downtime</span></label>
+          <label class="info-my"><i class="fa fa-circle" style="color:#BD9A31;"></i>Application
+        <span style="color:#BD9A31;">Under Construction</span></label>
+        <label class="info-my"><i class="fa fa-circle"></i>Environment
+        <span>Development</span></label>
+        <label class="info-my"><i class="fa fa-circle"></i>Version
+        <span>1</span></label>
+        
+        <label class="info-my"><i class="fa fa-circle"></i>Plant Name
+        <span>GGN</span></label>
+          </div>	
+          </div>
+          <div class="col-lg-12"> 
+           <div class="part1_pop">
+          <h4 class="heading_pop" style="line-height:2.5;">Software License Details</h4>
+          <div style="height:190px; overflow:auto">
+           <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Information</th>
+        <th>Status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>License Name</td>
+        <td>Hero WMS</td>
+        
+      </tr>
+      <tr>
+        <td>License Type</td>
+        <td> Commercial</td>
+        
+      </tr>
+      <tr>
+        <td>Acquisition Date</td>
+        <td>12-jan-2020</td>
+        
+      </tr>
+      <tr>
+        <td>Expiry Date</td>
+        <td>06-july-2020</td>
+        
+      </tr>
+      <tr>
+        <td>Vendor Name</td>
+        <td>Hero WMS</td>
+        
+      </tr>
+      <tr>
+        <td>Copyright</td>
+        <td>@2021</td>
+        
+      </tr>
+    </tbody>
+  </table>
+          </div>
+          
+         
+          </div>	
+          </div>
+        </div>
+        <div class="modal-footer" style="float:left;width:100%; background:#fff;">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-----------------------License end------------------------->
+     <!------------------------shortcuts key start----------------------->
+  <i class="fa fa-universal-access  shortcut"  data-toggle="modal" data-target="#acckey" title="Shortcut Key"></i>
+   
+  <div class="modal fade" id="acckey" role="dialog" style="z-index:99999;">
+    <div class="modal-dialog  modal-lg">    
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title" style="float:left;">
+          
+          <span class="pop_upk" style=" text-indent:0px;">Shortcut Keys</span>
+          </h4>
+        </div>
+        <div class="modal-body" style="background:#ebebeb;float:left;width: 100%;">
+          
+           <div class="col-lg-12" > 
+          <img src="img/keyboard1.png" class="img-responsive" style="width:100%; height:200px;">
+          </div>
+          
+          <div class="col-lg-12"> 
+           <div class="part1_popk">
+          <h4 class="heading_popk">License Information</h4>
+          <div style="height:140px; overflow:auto">
+           <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Menu Name</th>
+        <th>Key</th>
+        <th>Menu Name</th>
+        <th>Key</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Dashboard</td>
+        <td>d</td>
+        <td>Masters</td>
+        <td>m</td>
+        
+      </tr>
+      <tr>
+         <td>Warehouse Master</td>
+        <td>w</td>
+        <td>Customer Master</td>
+        <td>c</td>
+        
+      </tr>
+      <tr>
+         <td>Transactions</td>
+        <td>t</td>
+        <td>Raw Material Warehouse</td>
+        <td>r</td>
+        
+      </tr>
+       <tr>
+         <td>Putaway</td>
+        <td>p</td>
+        <td>Raw Material Warehouse</td>
+        <td>r</td>
+        
+      </tr>
+    </tbody>
+  </table>
+          </div>
+          
+         
+          </div>	
+          </div>
+        </div>
+        <div class="modal-footer" style="float:left;width:100%; background:#fff;">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!------------------------shortcuts key end----------------------->
+    <!------------------------color-theme start----------------------->
+<i class="fa fa-gears color_setting"  onClick="mycolor()" title="Color"></i>
+<div class="color" id="color">
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#0A7E8C'" class="color_btn" style="background:#0A7E8C;"></button>
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#333'" class="color_btn" style="background:#333; "></button>
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#0081AB'" class="color_btn" style="background:#0081AB;"></button>
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#3AA8C1 '" class="color_btn" style="background:#3AA8C1 ;"></button>
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#00468C '" class="color_btn" style="background:#00468C ;"></button>
+<button onClick=" document.getElementById('myNavbar').style.backgroundColor='#732E6C '" class="color_btn" style="background:#732E6C ; "></button>
+
+</div>
+    <!------------------------color-theme end----------------------->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/my-chart.js"></script>
+ <script src="js/control.js" type="application/javascript">  </script>
+</body>
+
+</html>
+
+

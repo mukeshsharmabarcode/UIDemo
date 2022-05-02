@@ -1,0 +1,342 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>login</title>
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/my_style.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+<div class="login_box">
+<div class="overview_login">
+<div class="part_11" id="part_11">
+<div class="vendor_logo">
+<img src="img/hero.png">
+<span>Hero<b>WMS</b></span>
+<p>Warehouse Management System</p>
+</div>
+<div class="slidedown"><a href="javascript:void(0)" onClick="mylogin()"><i class="fa fa-angle-double-down"></i></a></div>
+<div class="footer11">Copyright © BCI</div>
+
+</div>
+<div class="part_21" id="part_21">
+<div class="logo"><img src="img/imageedit_3_9987091016.png"></div>
+<div class="heading">
+<h2>Welcome</h2>
+<p>To Keep Connected With Us Please Login</p>
+</div>
+<form action="Dashboard.html" onSubmit="return submiited();" >
+<div class="form">
+<div style="position:relative;width:100%; float:left;">
+<input type="text" class="form-control ab" id="user"  placeholder="Enter User Name" onBlur="usererroru()" 
+oninput="onusererroru()"  >
+<i class="fa fa-user my"></i>
+<i class="fa fa-exclamation-circle" id="myicon"><span class="tooltiptext">E.g:-BCIL;</span></i>
+<span id="has-erroru" class="has-error"> </span>
+</div>
+<div style="position:relative;width:100%;float:left;">
+<input type="password" class="form-control ac" id="password"  placeholder="Enter Password" onBlur="usererrorp()"
+oninput="onusererrorp()">
+<i class="fa fa-lock my"></i>
+<span id="has-errorp" class="has-error"></span>
+</div>
+<div style="position:relative;width:100%;float:left;">
+<select class="form-control ad" id="plant"  onChange="planterror()" name="plant"   >
+    <option value="0">Select Plant:</option>
+    <option value="1">WMS Plant</option>
+    <option value="2">Other Plant</option>
+   
+  </select>
+  <i class="fa fa-map-marker my"></i>
+<span id="has-errorpl" class="has-error"></span>
+</div>
+<div class="checkbox " style="float:left;width:100%;">
+  <label><input type="checkbox" value="">Remember me</label>
+  
+</div>
+
+<button type="submit">Login Now</button>
+</div>
+</form>
+<div class="footer1"><span style="float:left;padding-top:10px; ">Version 1.2</span>
+<button type="button" class="btn_info" data-toggle="modal" data-target="#myModal" style="float:right;"><i class="fa fa-info"></i></button></div>
+</div>
+</div>
+</div>
+<!--ectrea============-->
+<div class="alertme1" id="ee1">
+<div  class="box_error1">
+<span class="closebtn1" onclick="document.getElementById('ee1').style.display='none';">&times;</span>
+<div class="boxe_view1">
+<div class="icone_view1"><i class="fa fa-times-circle "></i></div>
+<div class="error_con1">
+<h3>Login Failed</h3>
+<p>Credentials do not match</p>
+<button onclick="document.getElementById('ee1').style.display='none';"> Try Again!</button>
+</div>
+</div> 
+</div>
+ </div>
+ <div class="alertme1" id="ee2">
+<div  class="box_error1">
+<span class="closebtn1" onclick="document.getElementById('ee2').style.display='none';">&times;</span>
+<div class="boxe_view1">
+<div class="icone_view1"><i class="fa fa-times-circle "></i></div>
+<div class="error_con1">
+<h3>Login Failed</h3>
+<p>Enter user Id<br> Enter Password <br> Please Select Plant </p>
+<button onclick="document.getElementById('ee2').style.display='none';"> Try Again!</button>
+</div>
+</div> 
+</div>
+ </div>
+ <!------------------------License start----------------------->
+ <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title"><img src="img/imageedit_3_9987091016.png" width="63" height="40">
+          <span class="pop_uph" style="">Project Overview</span></h4>
+        </div>
+        <div class="modal-body" style="background:#ebebeb;float:left;width:100%;padding: 7px;">
+          <div class="col-lg-6" > 
+          <div class="part1_pop" style="max-height:257px;margin-bottom: 7px;">
+          <h4 class="heading_pop">Product Details</h4>         
+          <p class="subheading_pop"></p>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Client<span >Hero</span></label>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Product Type<span>WMS</span></label>
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Site<span>Gurgaon</span></label>          
+           <label class="info-my"><i class="fa fa-dot-circle-o"></i>Description<span>Warehouse</span></label>           
+            <label class="info-my"><i class="fa fa-dot-circle-o"></i>Developed For<span>HERO</span></label>          
+          <label class="info-my"><i class="fa fa-dot-circle-o"></i>Developed by<span>BCI</span></label>      
+
+         </div>
+          </div>
+          <div class="col-lg-6"> 
+           <div class="part1_pop" style="max-height:257px;margin-bottom: 7px;">
+          <h4 class="heading_pop">Application Details</h4>         
+          <p class="subheading_pop"></p>
+        <label class="info-my"><i class="fa fa-circle" style="color:#329d48;"></i>Application status
+        <span style="color:#329d48;">Live</span></label>
+        <label class="info-my"><i class="fa fa-circle" style=" color:#c46752;"></i>Application status
+        <span style=" color:#c46752;">Downtime</span></label>
+          <label class="info-my"><i class="fa fa-circle" style="color:#BD9A31;"></i>Application
+        <span style="color:#BD9A31;">Under Construction</span></label>
+        <label class="info-my"><i class="fa fa-circle"></i>Environment
+        <span>Development</span></label>
+        <label class="info-my"><i class="fa fa-circle"></i>Version
+        <span>1</span></label>
+        <label class="info-my"><i class="fa fa-circle"></i>Build
+        <span>1.2</span></label>
+          </div>	
+          </div>
+          <div class="col-lg-12"> 
+           <div class="part1_pop">
+          <h4 class="heading_pop" style="line-height:2.5;">Software License Details</h4>
+          <div style="height:190px; overflow:auto">
+           <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Information</th>
+        <th>Status</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>License Name</td>
+        <td>Hero WMS</td>
+        
+      </tr>
+      <tr>
+        <td>License Type</td>
+        <td> Commercial</td>
+        
+      </tr>
+      <tr>
+        <td>Acquisition Date</td>
+        <td>12-jan-2020</td>
+        
+      </tr>
+      <tr>
+        <td>Expiry Date</td>
+        <td>06-july-2020</td>
+        
+      </tr>
+      <tr>
+        <td>Vendor Name</td>
+        <td>Hero WMS</td>
+        
+      </tr>
+      <tr>
+        <td>Copyright</td>
+        <td>@2021</td>
+        
+      </tr>
+    </tbody>
+  </table>
+          </div>
+          
+         
+          </div>	
+          </div>
+        </div>
+        <div class="modal-footer" style="float:left;width:100%; background:#fff;">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  <!-----------------------License end------------------------->
+  
+</div>
+<script>
+$(document).ready(function(){
+  $('[data-toggle="tooltip"]').tooltip();   
+});
+</script>
+<script>
+function mylogin(){
+    document.getElementById("part_11").style.display=" none";
+	document.getElementById("part_21").style.display=" block";
+
+	}
+var user= document.getElementById("user");
+var plant= document.getElementById("plant");
+	var passwoed = document.getElementById("password");
+	var tool= document.getElementById("myicon");
+	
+function usererroru(){	
+	if( user.value==""){
+		document.getElementById('has-erroru').style.display=" block";
+	 document.getElementById('has-erroru').innerHTML="Enter valid User Name";
+	 user.style.borderColor="red";
+	 tool.style.visibility="visible";
+	}
+}
+
+	function onusererroru(){
+	if( user.value!=""){
+		user.style.borderColor="#ccc";
+	 document.getElementById('has-erroru').innerHTML="";
+	 tool.style.visibility="hidden";
+	 
+	}
+	
+	else{
+		
+		document.getElementById('has-erroru').innerHTML="Enter valid User Name";
+	}
+	
+	
+	}
+	function onusererrorp(){
+	
+	if( passwoed .value!=""){
+		passwoed .style.borderColor="#ccc";
+	 document.getElementById('has-errorp').innerHTML="";
+	 
+	}
+	else{
+		
+		document.getElementById('has-erroru').innerHTML="Enter valid User Name";
+	}
+	
+	
+	}
+	function usererrorp(){
+	
+	if( passwoed.value==""){
+		document.getElementById('has-errorp').style.display=" block";
+	 document.getElementById('has-errorp').innerHTML="Enter Password";
+	 passwoed.style.borderColor="red";
+	
+	}
+	
+	}
+	function planterror(){
+	
+	if( plant.value=="0"){
+		document.getElementById('has-errorpl').style.display=" block";
+	 document.getElementById('has-errorpl').innerHTML="Select plant";
+	 plant.style.borderColor="red";
+	
+	}
+	else{
+			plant.style.borderColor="#ccc";
+	 document.getElementById('has-errorpl').innerHTML="";
+	
+		
+	}
+	
+	}
+	
+	
+	
+	
+	
+	
+	function submiited(){
+		if( user.value=="bcil" && passwoed.value=="9896" && plant.value != "0" ){
+			return true;
+		}
+		else if(user.value!="bcil" && passwoed.value=="9896" && plant.value != "0"){
+			
+			document.getElementById('has-erroru').innerHTML="user id does not exist";
+			user.style.borderColor="red";
+			return false;
+			}
+			else if(user.value=="bcil" && passwoed.value!="9896" && plant.value != "0"){
+			document.getElementById('has-errorp').style.display=" block";
+	 document.getElementById('has-errorp').innerHTML="password incorrect";
+	 passwoed.style.borderColor="red";
+	 return false;
+			
+		}
+		else if(user.value=="bcil" && passwoed.value =="9896" && plant.value == "0"){
+			document.getElementById('has-errorpl').style.display=" block";
+	 document.getElementById('has-errorpl').innerHTML="Select Plant";
+	 plant.style.borderColor="red";
+	 return false;
+			
+		}
+		else if(user.value==="" && passwoed.value==="" && plant.value == "0" ){
+			var err2= document.getElementById('ee2');
+		err2.style.display = 'block';
+			document.getElementById('has-erroru').style.display=" block";
+			document.getElementById('has-erroru').innerHTML="Enter valid User Name";
+			user.style.borderColor="red";
+			document.getElementById('has-errorp').style.display=" block";
+	 document.getElementById('has-errorp').innerHTML="Enter Password ";
+	 passwoed.style.borderColor="red";
+	 document.getElementById('has-errorpl').style.display=" block";
+	 document.getElementById('has-errorpl').innerHTML="Select Plant";
+	 plant.style.borderColor="red";
+	 return false;
+			
+		}
+		else{ 
+		var err1= document.getElementById('ee1');
+		err1.style.display = 'block';
+		document.getElementById('has-erroru').innerHTML="user id does not exist";
+			user.style.borderColor="red";
+			document.getElementById('has-errorp').style.display=" block";
+	 document.getElementById('has-errorp').innerHTML="password incorrect";
+	 passwoed.style.borderColor="red";
+	 
+		return false;}
+	}
+	
+
+</script>
+ <script src="js/control.js" >  </script>
+</body>
+</html>

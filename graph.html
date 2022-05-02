@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<title>Dashboard</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+
+<link rel="stylesheet" href="http://provide.smashingmagazine.com/graph_tut_files/css/common.css">
+<style>
+/* =====chart CSS ===========*/
+.bar-group {float: left;height: 100%;margin: -1% 21% 0 4% !important;position: relative;width: auto !important;}
+#data-table {display: none;}
+#figure { height:100%!important; position: relative!important;}
+#figure ul {list-style: none !important;margin: 0!important;padding: 0!important;left: 4%!important;}
+.legend {background:none !important;border-radius:none !important;bottom:-5px !important;position:absolute !important;width:100%!important;left:0px!important;}
+.legend li {display:inline-block !important;float: left!important;height: 20px!important;margin:0!important;padding:10px 30px!important;width: auto!important;}
+.legend span.icon {	background-position: 50% 0;	border-radius: 100%;display: block;	float: left;	height: 16px;	margin: 2px 10px 0 0;	width: 16px;}
+.x-axis {	bottom: 0!important;	color: #555!important;	position: absolute!important;	text-align: center;	width: 540px;}
+.x-axis li {	float: left!important;	margin: 0 26px !important;	padding: 5px 0!important;	width: 76px!important;}
+.y-axis li {	border-top: 1px solid #f8ebeb!important;	display: block;	height: 62px;	width: 100%;}
+.y-axis li span {	display: block;	margin: -10px 0 0 -60px !important;	padding: 0 10px!important;	width: 58px!important;}
+.bar:hover span {	display: block !important;	margin-top: -25px!important;}
+.fig0 {	background:  #747474;}
+.fig1 {	background:  #65c2e8;}
+.fig2 {	background:#eea151;}
+.bar span {	background: #fff;	display: block;	opacity: 0;	-webkit-transition: all 0.2s ease-out;}
+.bar:hover span {	opacity: 1;}
+.chart {background:rgb(255, 255, 255);padding:4% 6% !important;width: 100%;float:left;position:relative;box-shadow: 0 0px 1px rgba(0, 0, 0, .5);}
+.chart h2 {	font-size: 18px;font-weight: bold;line-height: 20px;margin: 0;padding: 0;text-align: center;color: #0E6C81;}
+</style>
+<body >
+
+
+
+
+
+<div class="col-lg-7 col-xs-12">
+
+			<div class="chart">
+				<h2>Progress- Chart</h2>
+				<table id="data-table" border="1" cellpadding="13" cellspacing="0" >
+					<caption>BCI</caption>
+					<thead>
+						<tr>
+							<td>&nbsp;</td>							
+							<th scope="col">2013</th>
+							<th scope="col">2014</th>
+							<th scope="col">2015</th>
+							<th scope="col">2016</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">Sales</th>							
+							<td>6080</td>
+							<td>6240</td>
+							<td>3520</td>
+							<td>2240</td>
+						</tr>
+						<tr>
+							<th scope="row">Users</th>
+							
+							<td>6880</td>
+							<td>5760</td>
+							<td>5120</td>
+							<td>2640</td>
+						</tr>
+						<tr>
+							<th scope="row">Printing</th>
+							
+							<td>1760</td>
+							<td>2880</td>
+							<td>4720</td>
+							<td>7520</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+	
+</div>
+
+
+<script src="js/jquery.min.js"></script>
+
+<script src="js/my-chart.js"></script>
+ 
+</body>
+
+</html>
+
+
+
